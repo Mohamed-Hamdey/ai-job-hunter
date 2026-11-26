@@ -1,0 +1,46 @@
+name: Daily AI Job Hunter
+
+on:
+  schedule:
+    - cron: "0 7 * * *"  # 07:00 UTC (09:00 Egypt time)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-job-hunter
+  cancel-in-progress: false
+
+jobs:
+  find-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Run tests
+        run: pytest -q
+      
+      - name: Run job hunter
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python -m src.main
+      
+      - name: Persist SQLite database
+        run: |
+          git config user.name "AI Job Hunter"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/jobs.db
+          git commit -m "Update job database" || echo "No database changes"
+          git push
