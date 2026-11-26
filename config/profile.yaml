@@ -1,0 +1,83 @@
+candidate:
+  name: "AI Job Hunter Candidate"
+  education:
+    degree: "B.Sc. in Computer Science"
+    university: "Minia University"
+    graduation_year: 2026
+    gpa: 3.6
+  
+  technical_skills:
+    programming:
+      - Python
+      - Java
+      - C++
+      - C#
+      - SQL
+    machine_learning:
+      - Machine Learning
+      - Deep Learning
+      - scikit-learn
+      - TensorFlow
+      - Keras
+    computer_vision:
+      - OpenCV
+      - YOLOv11
+      - OCR
+      - Image processing
+    nlp:
+      - Natural Language Processing
+      - RAG (Retrieval-Augmented Generation)
+    tools:
+      - Git
+      - GitHub
+      - Jira
+      - Flask
+      - AWS fundamentals
+  
+  experience:
+    - company: "DP World -- Sokhna"
+      role: "IT Intern"
+      type: "internship"
+      description: "Full-stack feature work and bug fixing using Python, JavaScript, HTML, and CSS."
+    
+    - company: "Barq Systems"
+      role: "Network Intern"
+      type: "internship"
+      description: "Prototype ML-based network-traffic anomaly detection using Python and scikit-learn."
+    
+    - company: "iSchool / DEMI Program"
+      role: "Programming Instructor"
+      type: "teaching"
+      description: "Project-based programming instruction."
+  
+  projects:
+    - name: "UniMove"
+      description: "University transportation management graduation project with AI module including YOLOv11 vehicle detection and OCR-based mileage extraction."
+      technologies:
+        - YOLOv11
+        - OCR
+        - Python
+    
+    - name: "SignVision"
+      description: "Real-time sign-language-to-speech project using TensorFlow and OpenCV."
+      technologies:
+        - TensorFlow
+        - OpenCV
+        - Python
+    
+    - name: "EchoLens"
+      description: "Assistive audio-to-visual alert project using Python-based audio processing."
+      technologies:
+        - Python
+        - Audio processing
+    
+    - name: "Network Anomaly Detector"
+      description: "ML-based network-traffic anomaly detection prototype."
+      technologies:
+        - Python
+        - scikit-learn
+  
+  certifications:
+    - "Deep Learning Specialization, DeepLearning.AI"
+    - "Natural Language Processing Specialization, DeepLearning.AI"
+    - "Machine Learning for Data Analysis, NTI"

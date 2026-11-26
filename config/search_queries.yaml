@@ -1,0 +1,81 @@
+groups:
+  group_1_core_ai_ml:
+    description: "Core AI and ML roles"
+    query: >
+      (site:boards.greenhouse.io OR site:jobs.lever.co 
+       OR site:jobs.ashbyhq.com OR site:jobs.smartrecruiters.com
+       OR site:apply.workable.com OR site:myworkdayjobs.com)
+      ("AI Engineer" OR "Machine Learning Engineer"
+       OR "Deep Learning Engineer" OR "Computer Vision Engineer"
+       OR "NLP Engineer" OR "Applied AI Engineer")
+      (Egypt OR Cairo OR Giza OR Alexandria OR Remote)
+      -intitle:Senior -intitle:Staff -intitle:Principal
+      -intitle:Lead -intitle:Manager
+  
+  group_2_junior_engineering:
+    description: "Junior and graduate engineering roles"
+    query: >
+      (site:boards.greenhouse.io OR site:jobs.lever.co
+       OR site:jobs.ashbyhq.com OR site:apply.workable.com
+       OR site:jobs.smartrecruiters.com)
+      ("AI Developer" OR "Python Developer"
+       OR "Software Engineer" OR "ML Engineer")
+      (Junior OR Graduate OR "Entry Level" OR Associate OR Intern)
+      (Egypt OR Cairo OR Giza OR Alexandria)
+      -intitle:Senior -intitle:Lead -intitle:Manager
+  
+  group_3_target_companies:
+    description: "Target companies career pages"
+    query: >
+      (site:careers.microsoft.com OR site:jobs.siemens.com
+       OR site:jobs.dell.com OR site:amazon.jobs
+       OR site:careers.instabug.com
+       OR site:opportunities.vodafone.com
+       OR site:paymob.breezy.hr)
+      (Egypt OR Cairo OR Giza)
+      (AI OR "Machine Learning" OR "Computer Vision"
+       OR NLP OR Python OR "Software Engineer")
+      -intitle:Senior -intitle:Manager
+  
+  group_4_agentic_ai:
+    description: "Agentic AI and LLM applications"
+    query: >
+      (site:boards.greenhouse.io OR site:jobs.lever.co
+       OR site:jobs.ashbyhq.com OR site:apply.workable.com)
+      ("Agentic AI" OR "AI Agents" OR "LLM Engineer"
+       OR "Generative AI Engineer" OR "RAG Developer")
+      (Egypt OR Cairo OR Giza OR Remote)
+      (Junior OR Graduate OR Associate OR Engineer)
+      -intitle:Senior -intitle:Lead -intitle:Manager
+
+settings:
+  date_range_days: 3
+  locations:
+    - Egypt
+    - Cairo
+    - Giza
+    - Alexandria
+    - New Cairo
+    - Maadi
+    - Smart Village
+    - 6th of October
+  work_arrangements:
+    - on-site
+    - hybrid
+    - remote
+  preferred_seniority:
+    - Junior
+    - Graduate
+    - "New Graduate"
+    - "Entry Level"
+    - Associate
+    - Intern
+    - "Internship"
+    - "Early Career"
+  excluded_seniority:
+    - Senior
+    - Staff
+    - Principal
+    - Lead
+    - Manager
+    - Director
